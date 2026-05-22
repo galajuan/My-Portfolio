@@ -1,3 +1,8 @@
+/* --- RESET & GLOBAL FIXES --- */
+* {
+    box-sizing: border-box; /* This prevents elements from growing too wide */
+}
+
 /* --- CORE DESIGN SYSTEM --- */
 :root {
     --bg-main: #0a0c10;
@@ -15,6 +20,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     margin: 0;
+    overflow-x: hidden; /* This stops the horizontal scroll bar */
+}
+
+/* --- Ensure images don't break the layout --- */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* --- NAVIGATION --- */
