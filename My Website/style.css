@@ -1,0 +1,112 @@
+/* --- CORE DESIGN SYSTEM --- */
+:root {
+    --bg-main: #0a0c10;
+    --bg-card: #12161f;
+    --neon-green: #4caf50;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --border: #30363d;
+}
+
+/* --- BASE STYLES --- */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--neon-green);
+}
+
+/* --- LAYOUT --- */
+.portfolio-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- TYPOGRAPHY --- */
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+h2 { 
+    font-size: 1.5rem; 
+    color: var(--neon-green); 
+    margin-top: 40px; 
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 10px; 
+}
+
+/* --- COMPONENTS --- */
+.badge-status {
+    color: var(--neon-green);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* --- STACK SECTION --- */
+.stack-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.stack-chip {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* --- PROJECT CARDS --- */
+.showcase-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--neon-green);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.card-title { margin: 0 0 5px 0; }
+.card-tag { font-size: 0.75rem; color: var(--neon-green); text-transform: uppercase; }
+
+.card-action {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--neon-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.card-action:hover { 
+    text-decoration: underline; 
+    filter: brightness(1.2);
+}
